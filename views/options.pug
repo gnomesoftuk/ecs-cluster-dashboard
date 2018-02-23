@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title="Hermes Cluster Dashboard"
+        link(rel='stylesheet' href='css/overview.css')
+    body
+        div(class='errors ' + errors.display)
+            h2()='Server error:'
+            div()=errors.message
+        .container
+                select#clusterName
+                    each option in options
+                        option(value=option) #{option}
+                button(type='button' class='btn' onclick='gotoOverview()')='Choose'
+        .footer
+            | Last Updated:
+            script(type='text/javascript').
+                document.write(new Date().toTimeString());
+
+script.
+    var gotoOverview = function () {
+        var clusterName = document.getElementById('clusterName').value
+        window.location.href = "./cluster/" + clusterName;
+    }

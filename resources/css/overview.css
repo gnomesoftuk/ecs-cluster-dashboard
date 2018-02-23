@@ -1,0 +1,125 @@
+body {
+	background-color: #273747;
+	text-align: center;
+	font-family: monospace;
+	color: #e6e7e8;
+}
+
+.container {
+	position: relative;
+	display:flex;
+    flex-wrap: wrap;
+	vertical-align: middle;
+    justify-content: center;
+}
+
+.errors {
+    position: relative;
+    display:inline-block;
+    vertical-align: middle;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 5px 10px 5px;
+    background-color: #991a0a;
+    border: 1px solid #000000;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   height: 40px;
+   width: 100%;
+   background: #1A252F;
+   line-height:  40px;
+}
+
+.hide {
+    display:none !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.title {
+    min-height: 40px;
+}
+
+.box {
+    display: flex;
+    flex: 1;
+}
+
+.default-link{
+    /* all rules required to make the whole div clickable */
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+    /* this is a fix for IE7-9 */
+    background-color:#ffffff;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity:0;
+}
+
+.zone {
+	color: #e6e7e8;
+    padding: 5px 5px 25px 5px;
+    margin: 5px;
+
+    min-height: 200px;
+	text-align: center;
+
+	font-weight: bold;
+    flex: auto;
+}
+
+ul.zone {
+    list-style: none;
+}
+
+.flex-grid {
+    justify-content: flex-start;
+    display: flex;
+    flex: auto;
+    flex-flow: row wrap;
+}
+.flex-grid .col {
+    margin: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+.flex-grid { 
+    margin: 0 0 20px 0;
+}
+
+.col {
+    position: relative;
+    min-width: 150px;
+    max-width: 150px;
+    background: rgb(25, 71, 170);
+    padding: 10px;
+}
+
+.anchor-bottom-right {
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.active {
+	background-color: #2ECC71;
+}

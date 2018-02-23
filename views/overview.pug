@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title="Hermes Cluster Dashboard"
+        link(rel='stylesheet' href='../css/overview.css')
+        link(rel='stylesheet' href='../css/w3.css')
+        meta(http-equiv="refresh" content="60")
+    body
+        div(class='errors ' + errors.display)
+            h2()='Server error:'
+            div()=errors.message
+        h2() #{cluster.clusterName}
+        .container
+                each instance in cluster.instances
+                    div(class='box')
+                        ul(class='zone ' + instance.status)
+                            p()=instance.zone
+                            div(class='flex-grid')
+                                    each service in instance.services
+                                        div(class='col')=service.name
+                                            span(class="w3-badge w3-red anchor-bottom-right")=service.count
+        .footer
+            | Last Updated:
+            script(type='text/javascript').
+                document.write(new Date().toTimeString());
