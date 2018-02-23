@@ -1,5 +1,5 @@
 
-#ECS Cluster Dashboard
+# ECS Cluster Dashboard
 
 This application allows easy viewing of the current state of ECS clusters deployed into AWS.
 
