@@ -34,8 +34,7 @@ const doRenderResults = (res) => {
         
         let errors;
         if (err) {
-            console.log("FOUND ERROR")
-            errors = {message: JSON.stringify(err)};
+            errors = {message: err.message};
             clusterInfo = {
                 "clusterName": "",
                 "instances": []
@@ -43,6 +42,7 @@ const doRenderResults = (res) => {
         } else {
             errors = {display: 'hide'};
         }
+        
         res.render('overview', {errors: errors, config: config, cluster: clusterInfo});
     };
 };
@@ -52,7 +52,7 @@ const doRenderOptions = (res, options) => {
         console.log("render options "+ options)
         let errors;
         if (err) {
-            errors = {message: JSON.stringify(err)};
+            errors = {message: err.message};
             if (!options) {
                 options = [];
             }
