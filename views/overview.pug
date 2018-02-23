@@ -11,14 +11,15 @@ html
             div()=errors.message
         h2() #{cluster.clusterName}
         .container
-                each instance in cluster.instances
+                each zone in cluster.zones
                     div(class='box')
-                        ul(class='zone ' + instance.status)
-                            p()=instance.zone
+                        ul(class='zone ' + zone.status)
+                            p()=zone.name
                             div(class='flex-grid')
-                                    each service in instance.services
+                                    each service in zone.services
                                         div(class='col')=service.name
                                             span(class="w3-badge w3-red anchor-bottom-right")=service.count
+                        span(class="w3-badge w3-red anchor-bottom-right")=zone.count
         .footer
             | Last Updated:
             script(type='text/javascript').

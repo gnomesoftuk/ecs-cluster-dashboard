@@ -37,7 +37,7 @@ const doRenderResults = (res) => {
             errors = {message: err.message};
             clusterInfo = {
                 "clusterName": "",
-                "instances": []
+                "zones": []
             }
         } else {
             errors = {display: 'hide'};

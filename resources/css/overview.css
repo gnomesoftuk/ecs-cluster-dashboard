@@ -1,3 +1,11 @@
+/* Animations */
+@keyframes running {
+    0% {background-color: rgb(92, 94, 93);}
+    50% {background-color: rgb(123, 124, 124);}
+    100% {background-color: rgb(92, 94, 93);}
+}
+
+
 body {
 	background-color: #273747;
 	text-align: center;
@@ -49,6 +57,7 @@ body {
 .box {
     display: flex;
     flex: 1;
+    position: relative;
 }
 
 .default-link{
@@ -122,4 +131,15 @@ body {
 
 .active {
 	background-color: #2ECC71;
+}
+
+.inactive {
+	background-color: rgb(92, 94, 93);
+}
+
+.draining {
+    background-color: rgb(92, 94, 93);
+    animation-name: running;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
